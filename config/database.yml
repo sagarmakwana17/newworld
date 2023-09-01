@@ -80,8 +80,4 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  adapter: postgresql
-  database: newworld_production
-  username: newworld
-  password: <%= ENV["NEWWORLD_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
